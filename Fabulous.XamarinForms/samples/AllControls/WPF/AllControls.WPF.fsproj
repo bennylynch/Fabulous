@@ -24,11 +24,11 @@
         <None Include="app.config" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="FSharp.Core" />
-        <PackageReference Include="FSharp.Data" />
-        <PackageReference Include="SkiaSharp.Views.Forms.WPF" />
-        <PackageReference Include="Xamarin.Forms.Platform.WPF" />
-        <PackageReference Include="Xamarin.Forms.Maps.WPF" />
+        <PackageReference Include="FSharp.Core" Version="4.7.2" />
+        <PackageReference Include="FSharp.Data" Version="3.3.3" />
+        <PackageReference Include="SkiaSharp.Views.Forms.WPF" Version="1.68.1.1" />
+        <PackageReference Include="Xamarin.Forms.Platform.WPF" Version="4.8.0.1269" />
+        <PackageReference Include="Xamarin.Forms.Maps.WPF" Version="4.8.0.1269" />
        <!-- <PackageReference Include="Xamarin.FFImageLoading.Forms" /> -->
     </ItemGroup>
     <ItemGroup>

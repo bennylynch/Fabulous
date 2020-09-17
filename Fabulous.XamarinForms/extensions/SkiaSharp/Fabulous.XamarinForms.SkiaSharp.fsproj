@@ -14,8 +14,8 @@
     <None Include="SkiaSharp.Views.Forms.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FSharp.Core" />
-    <PackageReference Include="SkiaSharp.Views.Forms" />
+    <PackageReference Include="FSharp.Core" Version="4.7.2" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Fabulous.XamarinForms\Fabulous.XamarinForms.fsproj" />

@@ -39,6 +39,7 @@ group generator
   nuget Plugin.MediaManager.Forms 0.9.6
   nuget OxyPlot.Xamarin.Forms 1.0.0
   nuget Xamarin.FFImageLoading.Forms 2.4.11.982
+  nuget ZXing.Net.Mobile.Forms 2.4.1
 
 # Dependencies used when compiling and running Android samples.
 group androidapp

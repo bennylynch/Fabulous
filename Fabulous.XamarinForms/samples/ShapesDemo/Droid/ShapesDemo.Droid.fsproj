@@ -35,9 +35,7 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>False</ConsolePause>
     <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
-    <BundleAssemblies>false</BundleAssemblies>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
@@ -52,9 +50,7 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
-    <BundleAssemblies>false</BundleAssemblies>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -63,47 +59,6 @@
     <AndroidSupportedAbis />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
-    <Compile Include="Properties\AssemblyInfo.fs" />
-    <Compile Include="MainActivity.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\AboutAssets.txt" />
-    <None Include="Resources\AboutResources.txt" />
-    <AndroidResource Include="Resources\drawable\icon.png" />
-    <AndroidResource Include="Resources\drawable\monkeyface.png">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\layout\Tabbar.axml" />
-    <AndroidResource Include="Resources\layout\Toolbar.axml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\values\colors.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\src\Fabulous.LiveUpdate\Fabulous.LiveUpdate.fsproj">
-      <Project>{cf47f218-12c5-4026-b1f1-bd534d0a3fa6}</Project>
-      <Name>Fabulous.LiveUpdate</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\src\Fabulous\Fabulous.fsproj">
-      <Project>{07bd345b-2964-46be-87eb-1c009f5fd316}</Project>
-      <Name>Fabulous</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\src\Fabulous.XamarinForms.LiveUpdate\Fabulous.XamarinForms.LiveUpdate.fsproj">
-      <Project>{74083fca-7678-4c90-a257-59e2eebf415d}</Project>
-      <Name>Fabulous.XamarinForms.LiveUpdate</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\src\Fabulous.XamarinForms\Fabulous.XamarinForms.fsproj">
-      <Project>{e8353f5f-71ec-4982-8865-f95991d5a0f6}</Project>
-      <Name>Fabulous.XamarinForms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ShapesDemo\ShapesDemo.fsproj">
-      <Project>{AA2BEC0E-9BA3-4103-A60E-1B61F0F83CE6}</Project>
-      <Name>ShapesDemo</Name>
-    </ProjectReference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Runtime.Serialization" />
@@ -269,6 +224,45 @@
     <Reference Include="Xamarin.Google.Guava.ListenableFuture">
       <HintPath>..\..\..\..\packages\androidxapp\Xamarin.Google.Guava.ListenableFuture\lib\monoandroid50\Xamarin.Google.Guava.ListenableFuture.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+    <Compile Include="Properties\AssemblyInfo.fs" />
+    <Compile Include="MainActivity.fs" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable\monkeyface.png">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <ProjectReference Include="..\..\..\..\src\Fabulous.LiveUpdate\Fabulous.LiveUpdate.fsproj">
+      <Project>{cf47f218-12c5-4026-b1f1-bd534d0a3fa6}</Project>
+      <Name>Fabulous.LiveUpdate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\src\Fabulous\Fabulous.fsproj">
+      <Project>{07bd345b-2964-46be-87eb-1c009f5fd316}</Project>
+      <Name>Fabulous</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Fabulous.XamarinForms.LiveUpdate\Fabulous.XamarinForms.LiveUpdate.fsproj">
+      <Project>{74083fca-7678-4c90-a257-59e2eebf415d}</Project>
+      <Name>Fabulous.XamarinForms.LiveUpdate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Fabulous.XamarinForms\Fabulous.XamarinForms.fsproj">
+      <Project>{e8353f5f-71ec-4982-8865-f95991d5a0f6}</Project>
+      <Name>Fabulous.XamarinForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShapesDemo\ShapesDemo.fsproj">
+      <Project>{AA2BEC0E-9BA3-4103-A60E-1B61F0F83CE6}</Project>
+      <Name>ShapesDemo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.FSharp.targets" />
   <Import Project="..\..\..\..\packages\androidxapp\Xamarin.Forms\build\Xamarin.Forms.targets" Condition="Exists('..\..\..\..\packages\androidxapp\Xamarin.Forms\build\Xamarin.Forms.targets')" />

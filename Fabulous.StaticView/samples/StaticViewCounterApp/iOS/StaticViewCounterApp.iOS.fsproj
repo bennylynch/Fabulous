@@ -82,31 +82,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <CodesignProvision>iOS Team Provisioning Profile: com.donsyme.AllControls</CodesignProvision>
   </PropertyGroup>
-  <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60x60@2x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60x60@3x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-76x76@1x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-76x76@2x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-83.5x83.5@2x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ios-marketing.png" />
-    <ImageAsset Include="Assets.xcassets\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-    <Compile Include="AppDelegate.fs" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets')" />
   <Import Project="..\..\..\..\packages\iosapp\Xamarin.Forms\build\Xamarin.Forms.targets" Condition="Exists('..\..\..\..\packages\iosapp\Xamarin.Forms\build\Xamarin.Forms.targets')" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Fabulous.StaticView.XamarinForms\Fabulous.StaticView.XamarinForms.fsproj">
-      <Project>{5b23ac3b-e949-4992-93bd-6ce091f4e351}</Project>
-      <Name>Fabulous.StaticView.XamarinForms</Name>
-    </ProjectReference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Numerics" />
@@ -126,8 +104,35 @@
     <Reference Include="FSharp.Core">
       <HintPath>..\..\..\..\packages\iosapp\FSharp.Core\lib\netstandard2.0\FSharp.Core.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-83.5x83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ios-marketing.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-76x76@1x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-76x76@2x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60x60@3x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60x60@2x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-83.5x83.5@2x.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <Compile Include="AppDelegate.fs" />
+    <ProjectReference Include="..\..\..\src\Fabulous.StaticView.XamarinForms\Fabulous.StaticView.XamarinForms.fsproj">
+      <Project>{5b23ac3b-e949-4992-93bd-6ce091f4e351}</Project>
+      <Name>Fabulous.StaticView.XamarinForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StaticViewCounterApp\StaticViewCounterApp.fsproj">
-      <Project>{4282E90F-2519-46D0-B593-D57CFCA36A2D}</Project>
+      <Project>{7EAD7307-E81F-4B5D-A212-4B274B43406C}</Project>
       <Name>StaticViewCounterApp</Name>
     </ProjectReference>
   </ItemGroup>

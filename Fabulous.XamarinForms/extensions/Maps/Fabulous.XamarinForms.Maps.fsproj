@@ -14,8 +14,8 @@
     <None Include="Xamarin.Forms.Maps.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FSharp.Core" />
-    <PackageReference Include="Xamarin.Forms.Maps" />
+    <PackageReference Include="FSharp.Core" Version="4.7.2" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.8.0.1269" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Fabulous.XamarinForms\Fabulous.XamarinForms.fsproj" />

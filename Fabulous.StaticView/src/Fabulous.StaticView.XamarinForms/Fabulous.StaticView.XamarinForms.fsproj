@@ -17,8 +17,8 @@
     <Compile Include="StaticViewProgram.fs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" />
-    <PackageReference Include="FSharp.Core" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="FSharp.Core" Version="4.7.2" />
   </ItemGroup>
   <Import Project="..\..\..\Packages.targets" />
 </Project>

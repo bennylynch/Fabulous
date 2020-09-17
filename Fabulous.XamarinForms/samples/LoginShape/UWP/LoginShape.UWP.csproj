@@ -150,8 +150,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FSharp.Core" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" />
+    <PackageReference Include="FSharp.Core">
+      <Version>4.7.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LoginShape\LoginShape.fsproj">

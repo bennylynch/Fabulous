@@ -19,19 +19,19 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dotnet.ProjInfo" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" />
-    <PackageReference Include="FSharp.Compiler.Service" />
-    <PackageReference Include="Newtonsoft.Json" />
-    <PackageReference Include="Xamarin.Forms" />
-    <PackageReference Include="FsUnit" />
-    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="FSharp.Compiler.Service" Version="25.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="FsUnit" Version="3.8.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
   
     <!-- References used indirectly by FCS when compiling tests -->
     <PackageReference Include="FSharp.Core" />
-    <PackageReference Include="Microsoft.CSharp" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="NETStandard.Library" />
-    <PackageReference Include="System.Reflection.Emit.ILGeneration" />
-    <PackageReference Include="System.Reflection.Emit.Lightweight" />
+    <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.7.0" />
   </ItemGroup>
   <Import Project="..\..\..\Packages.targets" />
 
