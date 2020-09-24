@@ -89,7 +89,7 @@ type ViewBuilders() =
                                                ?ref: ViewRef,
                                                ?key: string,
                                                ?tag: obj,
-                                               ?onScanResult: unit -> unit,
+                                               ?onScanResult: ZXing.Result -> unit,
                                                ?autoFocusRequested: int -> unit,
                                                ?focused: Xamarin.Forms.FocusEventArgs -> unit,
                                                ?sizeChanged: float * float -> unit,
@@ -124,7 +124,8 @@ type ViewBuilders() =
         match result with None -> () | Some v -> attribBuilder.Add(ViewAttributes.ResultAttribKey, (v)) 
         match scanResultCommand with None -> () | Some v -> attribBuilder.Add(ViewAttributes.ScanResultCommandAttribKey, (v)) 
         match scanResultCommandCanExecute with None -> () | Some v -> attribBuilder.Add(ViewAttributes.ScanResultCommandCanExecuteAttribKey, (v)) 
-        match onScanResult with None -> () | Some v -> attribBuilder.Add(ViewAttributes.OnScanResultAttribKey, (fun f -> System.EventHandler(fun _sender _args -> f()))(v)) 
+        //match onScanResult with None -> () | Some v -> attribBuilder.Add(ViewAttributes.OnScanResultAttribKey, (fun f -> System.EventHandler(fun _sender _args -> f()))(v))
+        match onScanResult with None -> () | Some v -> attribBuilder.Add(ViewAttributes.OnScanResultAttribKey, (fun f -> ZXing.Net.Mobile.Forms.ZXingScannerView.ScanResultDelegate(fun _args  -> f(_args) ) )(v))
         match autoFocusRequested with None -> () | Some v -> attribBuilder.Add(ViewAttributes.AutoFocusRequestedAttribKey, (fun f -> System.EventHandler<int>(fun _sender _args -> f _args))(v)) 
         attribBuilder
 
@@ -298,7 +299,7 @@ type ViewBuilders() =
                                                    ?ref: ViewRef<ZXing.Net.Mobile.Forms.ZXingScannerView>,
                                                    ?key: string,
                                                    ?tag: obj,
-                                                   ?onScanResult: unit -> unit,
+                                                   ?onScanResult: ZXing.Result -> unit,
                                                    ?autoFocusRequested: int -> unit,
                                                    ?focused: Xamarin.Forms.FocusEventArgs -> unit,
                                                    ?sizeChanged: float * float -> unit,
@@ -434,7 +435,7 @@ type View private () =
                                           ?menu: ViewElement,
                                           ?minimumHeight: float,
                                           ?minimumWidth: float,
-                                          ?onScanResult: unit -> unit,
+                                          ?onScanResult: ZXing.Result -> unit,
                                           ?opacity: float,
                                           ?ref: ViewRef<ZXing.Net.Mobile.Forms.ZXingScannerView>,
                                           ?resources: (string * obj) list,
@@ -561,7 +562,7 @@ module ViewElementExtensions =
     type ViewElement with
 
         /// Adjusts the OnScanResult property in the visual element
-        member x.OnScanResult(value: unit -> unit) = x.WithAttribute(ViewAttributes.OnScanResultAttribKey, (fun f -> System.EventHandler(fun _sender _args -> f()))(value))
+        member x.OnScanResult(value: unit -> unit) = x.WithAttribute(ViewAttributes.OnScanResultAttribKey, (fun f -> ZXing.Net.Mobile.Forms.ZXingScannerView.ScanResultDelegate(fun _sender  -> f() ) ) (value))
 
         /// Adjusts the AutoFocusRequested property in the visual element
         member x.AutoFocusRequested(value: int -> unit) = x.WithAttribute(ViewAttributes.AutoFocusRequestedAttribKey, (fun f -> System.EventHandler<int>(fun _sender _args -> f _args))(value))
